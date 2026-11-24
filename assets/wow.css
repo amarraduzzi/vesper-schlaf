@@ -1,0 +1,43 @@
+/* Vesper wow-laag: alleen actief met .wj (geen reduced-motion) */
+.prog{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(var(--pg,0));background:linear-gradient(90deg,#f4c77b,#fff4d6);z-index:100;box-shadow:0 0 12px rgba(244,199,123,.7);pointer-events:none}
+@keyframes fup{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes wdin{from{opacity:0;transform:translateY(42px) rotateX(-45deg);filter:blur(10px)}to{opacity:1;transform:none;filter:none}}
+@keyframes drift{from{transform:translate(-8%,-6%) scale(1)}to{transform:translate(10%,8%) scale(1.25)}}
+@keyframes flo{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes glw{0%,100%{transform:scale(1);opacity:.75}50%{transform:scale(1.2);opacity:1}}
+@keyframes shim{to{background-position:200% 0}}
+@keyframes sweep{0%,60%{transform:translateX(-130%)}100%{transform:translateX(130%)}}
+@keyframes ccin{from{opacity:0;transform:translateY(22px) scale(.94)}to{opacity:1;transform:none}}
+@keyframes pt{from{opacity:1;transform:translate(0,0) scale(1)}to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.2)}}
+.wj .wd{display:inline-block;opacity:0;animation:wdin .95s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(.15s + var(--i)*.09s)}
+.wj .hero .eyebrow,.wj .ah .eyebrow{opacity:0;animation:fup .9s .05s forwards}
+.wj .hero p,.wj .ah p{opacity:0;animation:fup .9s .75s forwards}
+.wj .hero .btns{opacity:0;animation:fup .9s 1s forwards}
+.aur{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.aur i{position:absolute;width:52vmax;height:52vmax;border-radius:50%;filter:blur(70px);opacity:.34;animation:drift 20s ease-in-out infinite alternate}
+.aur i:nth-child(1){background:#4b3fd8;left:-12%;top:-20%}
+.aur i:nth-child(2){background:#1b8fb0;right:-18%;top:10%;animation-duration:26s;opacity:.22}
+.aur i:nth-child(3){background:#f4c77b;left:30%;bottom:-38%;animation-duration:32s;opacity:.14}
+.mg{position:absolute;inset:0;pointer-events:none;background:radial-gradient(420px circle at var(--mx,70%) var(--my,30%),rgba(244,199,123,.11),transparent 60%)}
+.wj .hm .moon{animation:flo 9s ease-in-out infinite}
+.wj .pano::before{animation:glw 7s ease-in-out infinite}
+.wj .pano p{background:linear-gradient(90deg,#f3ead7 20%,#f4c77b 45%,#fff 55%,#f3ead7 80%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shim 7s linear infinite}
+.wj .ah[style],.wj .pano[style]{background-position:center calc(50% + var(--py,0px))!important}
+.btn{position:relative;overflow:hidden}
+.btn.g::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.5) 50%,transparent 70%);transform:translateX(-130%);animation:sweep 4.5s infinite;pointer-events:none}
+.wj .wv{opacity:0;transform:translateY(38px) scale(.97);filter:blur(7px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1),filter .9s;transition-delay:var(--d,0s)}
+.wj .wv.in{opacity:1;transform:none;filter:none}
+.wj .wv.done{transition:transform .25s ease-out,box-shadow .3s,border-color .3s;transition-delay:0s}
+.wj .pic.wv{clip-path:inset(14% 10% 14% 10% round 26px);transition:clip-path 1.3s cubic-bezier(.2,.8,.2,1),opacity .9s,transform .9s,filter .9s}
+.wj .pic.wv.in{clip-path:inset(0 round 14px)}
+.pic{overflow:hidden;border-radius:14px}
+.pic img{transform:scale(1.14);will-change:transform}
+.art::after{content:"";position:absolute;inset:0;background:radial-gradient(320px circle at var(--gx,50%) var(--gy,50%),rgba(244,199,123,.17),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.art:hover::after{opacity:1}
+.art:hover{border-color:rgba(244,199,123,.5);box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.card:hover{box-shadow:0 18px 50px rgba(0,0,0,.4)}
+.wj .cc{animation:ccin .6s cubic-bezier(.2,.8,.2,1) both}
+.wj .cc:nth-child(2){animation-delay:.1s}
+.wj .cc:nth-child(3){animation-delay:.2s}
+.pt{position:fixed;width:7px;height:7px;margin:-3px 0 0 -3px;border-radius:50%;background:#f4c77b;box-shadow:0 0 10px #f4c77b;pointer-events:none;z-index:200;animation:pt .8s ease-out forwards}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}.wv{opacity:1!important;transform:none!important;filter:none!important;clip-path:none!important}}

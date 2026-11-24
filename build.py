@@ -168,7 +168,7 @@ def bg(n): return f' style="background-image:linear-gradient(180deg,rgba(7,10,26
 def url(l,sub=""): return f"/{l}/{sub}"
 def head(l,title,desc,path_by_lang,self_path):
     alts="".join(f'<link rel="alternate" hreflang="{x}" href="{B}{p}">' for x,p in path_by_lang.items())+f'<link rel="alternate" hreflang="x-default" href="{B}{path_by_lang["de"]}">'
-    return f'<!doctype html><html lang="{l}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title}</title><meta name="description" content="{desc}"><link rel="canonical" href="{B}{self_path}">{alts}<meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:type" content="website"><meta name="theme-color" content="#070a1a"><link rel="icon" href="/assets/vesper.svg"><link rel="stylesheet" href="/assets/style.css"></head><body>'
+    return f'<!doctype html><html lang="{l}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title}</title><meta name="description" content="{desc}"><link rel="canonical" href="{B}{self_path}">{alts}<meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:type" content="website"><meta name="theme-color" content="#070a1a"><link rel="icon" href="/assets/vesper.svg"><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/wow.css"><script>if(!matchMedia("(prefers-reduced-motion:reduce)").matches)document.documentElement.classList.add("wj")</script></head><body>'
 def header(l,paths,home=True):
     t=T[l]
     if home:
@@ -180,7 +180,7 @@ def header(l,paths,home=True):
     return f'<header class="nv"><div class="nvi"><a class="logo" href="/{l}/"><i></i>Vesper</a>{nvl}<div class="lg">{lg}</div></div></header>'
 def footer(l):
     t=T[l];a=t["art"]
-    return f'<footer><div class="wrap fi"><div>{t["foot"]}</div><div><a href="/{l}/">{t["home"]}</a>{"".join(f'<a href="/{l}/{x["slug"]}/">{x["title"].split(":")[0]}</a>' for x in t["arts"])}{L(l,"footer")}</div><div class="dis">{t["dis"]}</div></div></footer><script src="/assets/app.js" defer></script></body></html>'
+    return f'<footer><div class="wrap fi"><div>{t["foot"]}</div><div><a href="/{l}/">{t["home"]}</a>{"".join(f'<a href="/{l}/{x["slug"]}/">{x["title"].split(":")[0]}</a>' for x in t["arts"])}{L(l,"footer")}</div><div class="dis">{t["dis"]}</div></div></footer><script src="/assets/app.js" defer></script><script src="/assets/wow.js" defer></script></body></html>'
 def paths_home(): return {x:f"/{x}/" for x in LANGS}
 def paths_art(i=0): return {x:f'/{x}/{T[x]["arts"][i]["slug"]}/' for x in LANGS}
 
