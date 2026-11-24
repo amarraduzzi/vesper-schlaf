@@ -211,6 +211,7 @@ def article(l,i0=0):
     for i,(h,p) in enumerate(a["s"]):
         o+=f'<h2>{h}</h2><p>{p}</p>'
         if i==0: o+=f'<div class="cb"><p>{MORE[l]}:</p>{L(l,"art-mid",GO[l])}</div>'
+        if i==1 and img(AK[i0]): o+=f'<figure class="pic"><img src="/assets/img/{AK[i0]}.jpg" alt="" width="1280" height="720" loading="lazy"></figure>'
         if i<2: o+='<div class="sep">· · ·</div>'
     o+=f'<h2>{a["ch"]}</h2><div class="chk">'+"".join(f'<label><input type="checkbox"><span>{x}</span></label>' for x in a["ci"])+f'</div><p class="done" hidden>{a["done"]} {L(l,"art-end",GO[l])}</p>'
     o+=f'<p class="fine">{a["fine"]}</p><div class="rel"><span class="eyebrow">{a["rel"]}</span><p><a class="xl" href="/{l}/#check">{t["ck"]["k"]} →</a> &nbsp; <a class="xl" href="/{l}/#rechner">{t["calc"]["k"]} →</a> {"".join(f' &nbsp; <a class="xl" href="/{l}/{x["slug"]}/">{x["title"]} →</a>' for x in t["arts"] if x is not a)}</p></div></article>'
