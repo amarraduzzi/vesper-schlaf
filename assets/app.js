@@ -11,7 +11,7 @@ if(cv){const c=cv.getContext('2d');let W,H,S=[],sh=null;
  const size=()=>{const r=cv.parentElement.getBoundingClientRect();W=cv.width=r.width;H=cv.height=r.height;S=Array.from({length:Math.round(W*H/5200)},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.3+.2,p:Math.random()*6.28,s:Math.random()*.02+.005}))};
  size();addEventListener('resize',size);
  const draw=()=>{c.clearRect(0,0,W,H);for(const s of S){s.p+=s.s;c.globalAlpha=.35+.65*Math.abs(Math.sin(s.p));c.fillStyle='#fff';c.beginPath();c.arc(s.x,s.y,s.r,0,6.283);c.fill()}
-  if(!sh&&Math.random()<.004)sh={x:Math.random()*W*.8+W*.1,y:Math.random()*H*.35,l:0};
+  if(!sh&&Math.random()<.011)sh={x:Math.random()*W*.8+W*.1,y:Math.random()*H*.35,l:0};
   if(sh){sh.l+=9;sh.x+=7;sh.y+=3.5;c.globalAlpha=Math.max(0,1-sh.l/180);c.strokeStyle='#f3ead7';c.lineWidth=1.5;c.beginPath();c.moveTo(sh.x,sh.y);c.lineTo(sh.x-sh.l*.45,sh.y-sh.l*.22);c.stroke();if(sh.l>180)sh=null}
   if(!rm)requestAnimationFrame(draw)};draw()}
 /* calc */

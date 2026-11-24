@@ -180,7 +180,7 @@ def header(l,paths,home=True):
     return f'<header class="nv"><div class="nvi"><a class="logo" href="/{l}/"><i></i>Vesper</a>{nvl}<div class="lg">{lg}</div></div></header>'
 def footer(l):
     t=T[l];a=t["art"]
-    return f'<footer><div class="wrap fi"><div>{t["foot"]}</div><div><a href="/{l}/">{t["home"]}</a>{"".join(f'<a href="/{l}/{x["slug"]}/">{x["title"].split(":")[0]}</a>' for x in t["arts"])}{L(l,"footer")}</div><div class="dis">{t["dis"]}</div></div></footer><script src="/assets/app.js" defer></script><script src="/assets/wow.js" defer></script></body></html>'
+    return f'<footer><div class="wrap fi"><div>{t["foot"]}</div><div><a href="/{l}/">{t["home"]}</a>{"".join(f'<a href="/{l}/{x["slug"]}/">{x["title"].split(":")[0]}</a>' for x in t["arts"])}{L(l,"footer")}</div><div class="dis">{t["dis"]}</div></div></footer><script src="/assets/app.js" defer></script><script src="/assets/wow.js" defer></script><script src="/assets/wow2.js" defer></script></body></html>'
 def paths_home(): return {x:f"/{x}/" for x in LANGS}
 def paths_art(i=0): return {x:f'/{x}/{T[x]["arts"][i]["slug"]}/' for x in LANGS}
 

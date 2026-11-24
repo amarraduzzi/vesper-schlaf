@@ -41,3 +41,19 @@
 .wj .cc:nth-child(3){animation-delay:.2s}
 .pt{position:fixed;width:7px;height:7px;margin:-3px 0 0 -3px;border-radius:50%;background:#f4c77b;box-shadow:0 0 10px #f4c77b;pointer-events:none;z-index:200;animation:pt .8s ease-out forwards}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}.wv{opacity:1!important;transform:none!important;filter:none!important;clip-path:none!important}}
+/* laag 2: levende pagina */
+.fx{position:fixed;left:0;top:0;pointer-events:none;z-index:40}
+.mt{position:absolute;left:0;right:0;bottom:-1px;height:34vh;min-height:170px;pointer-events:none;z-index:1;overflow:hidden}
+.mt svg{max-width:none;position:absolute;left:-4%;width:108%;height:100%;bottom:0;will-change:transform}
+.mq{overflow:hidden;white-space:nowrap;padding:34px 0;background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mqt{display:inline-block;font:italic clamp(54px,11vw,140px)/1 var(--serif);color:transparent;-webkit-text-stroke:1px rgba(244,199,123,.5);will-change:transform;letter-spacing:.01em}
+.mtop{position:fixed;right:16px;bottom:16px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(244,199,123,.35);background:rgba(13,18,51,.82);backdrop-filter:blur(8px);padding:0;cursor:pointer;z-index:90;opacity:0;transform:translateY(22px) scale(.8);pointer-events:none;transition:opacity .5s,transform .5s;box-shadow:0 0 22px rgba(244,199,123,.25)}
+.mtop.on{opacity:1;transform:none;pointer-events:auto}
+.mtop svg{width:100%;height:100%;display:block}
+.mtop:hover{box-shadow:0 0 34px rgba(244,199,123,.55)}
+.btn,.cta2{transition:transform .25s ease-out,box-shadow .3s,background .3s}
+.pano::before{bottom:calc(-300px + var(--rs,.5)*230px)}
+.wj section h2{position:relative}
+.wj section h2::after{content:"";display:block;height:2px;width:72px;margin-top:14px;background:linear-gradient(90deg,#f4c77b,transparent);transform:scaleX(0);transform-origin:0 50%;transition:transform 1.1s cubic-bezier(.2,.8,.2,1) .35s}
+.wj section h2.in::after{transform:scaleX(1)}
+.aur{transition:transform .6s ease-out}
