@@ -2,6 +2,7 @@ import os
 MAIN="https://molitademo1.pages.dev"
 B="https://vesper-schlaf.ch"
 LANGS=["de","fr","it"]
+NV={"de":"Mehr ↗","fr":"Plus ↗","it":"Altro ↗"}
 GO={"de":"Weiter entdecken →","fr":"Aller plus loin →","it":"Vai oltre →"}
 MORE={"de":"Mehr zum Thema","fr":"En savoir plus","it":"Approfondisci"}
 def L(l,place,label=None,cls="xl"):
@@ -136,10 +137,10 @@ def head(l,title,desc,path_by_lang,self_path):
 def header(l,paths,home=True):
     t=T[l]
     if home:
-        links="".join(f'<a href="#{a}">{n}</a>' for a,n in zip(["rechner","check","abend","atem","mythen"],t["nav"][:3]+[t["br"]["nav"],t["nav"][3]]))+L(l,"nav","Molita ↗")
+        links="".join(f'<a href="#{a}">{n}</a>' for a,n in zip(["rechner","check","abend","atem","mythen"],t["nav"][:3]+[t["br"]["nav"],t["nav"][3]]))+L(l,"nav",NV[l])
         nvl=f'<nav class="nvl">{links}</nav>'
     else:
-        nvl=f'<nav class="nvl"><a href="/{l}/">← {t["home"]}</a>{L(l,"nav","Molita ↗")}</nav>'
+        nvl=f'<nav class="nvl"><a href="/{l}/">← {t["home"]}</a>{L(l,"nav",NV[l])}</nav>'
     lg="".join(f'<a href="{paths[x]}"{" class=on" if x==l else ""} hreflang="{x}">{x.upper()}</a>' for x in LANGS)
     return f'<header class="nv"><div class="nvi"><a class="logo" href="/{l}/"><i></i>Vesper</a>{nvl}<div class="lg">{lg}</div></div></header>'
 def footer(l):
