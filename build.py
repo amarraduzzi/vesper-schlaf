@@ -124,9 +124,44 @@ BR={
 "de":dict(k="Atemübung",h="Vier ein, <em>sechs aus</em>",p="Folge dem Kreis: Er wächst beim Einatmen und schrumpft beim Ausatmen. Eine ruhige Übung für zwischendurch, kein Heilmittel.",go="Starten",st="Stoppen",i="Einatmen",o="Ausatmen",rd="Bereit",u="Runden",nav="Atmen"),
 "fr":dict(k="Exercice de respiration",h="Quatre pour inspirer, <em>six pour expirer</em>",p="Suivez le cercle : il grandit à l’inspiration et rétrécit à l’expiration. Un exercice calme, pour une pause, pas un remède.",go="Démarrer",st="Arrêter",i="Inspirez",o="Expirez",rd="Prêt",u="tours",nav="Respirer"),
 "it":dict(k="Esercizio di respirazione",h="Quattro per inspirare, <em>sei per espirare</em>",p="Segui il cerchio: cresce quando inspiri e si restringe quando espiri. Un esercizio calmo per una pausa, non un rimedio.",go="Avvia",st="Ferma",i="Inspira",o="Espira",rd="Pronto",u="giri",nav="Respiro")}
+
+def _mk(slug,title,lede,secs,ch,ci,done,l): 
+    b=ART2[l];return dict(slug=slug,title=title,lede=lede,s=secs,ch=ch,ci=ci,done=done,rel=b["rel"],fine=b["fine"])
+ART3={
+"de":_mk("schlafzyklen-verstehen","Schlafzyklen: Was in einer Nacht passiert","Eine Nacht ist kein gleichmäßiger Block, sondern eine Abfolge von Phasen. Ein ruhiger Überblick.",
+ [("Leicht, tief, Traum","Eine Nacht besteht aus mehreren Durchgängen. Jeder beginnt mit leichtem Schlaf, geht in tiefen Schlaf über und endet mit Traumschlaf. Die Übergänge sind fließend und von Nacht zu Nacht verschieden."),
+  ("Rund 90 Minuten pro Runde","Als Faustregel dauert ein Durchgang etwa 90 Minuten. Deshalb arbeitet der Schlafrechner mit Vielfachen davon. Es ist ein Richtwert: Bei manchen Menschen sind die Zyklen etwas kürzer oder länger."),
+  ("Warum der Wecker manchmal härter trifft","Wer mitten aus dem Tiefschlaf geweckt wird, fühlt sich oft benommen. Wer näher am Ende eines Durchgangs aufwacht, empfindet es häufig leichter. Mit festen Zeiten und einer kleinen Zeitreserve zum Einschlafen kannst du das nutzen.")],
+ "Dein Schlafrhythmus in fünf Punkten",["Aufstehzeit festlegen und rückwärts rechnen","Rund 15 Minuten zum Einschlafen einplanen","Möglichst zu ähnlichen Zeiten ins Bett gehen","Den Wecker nicht zu oft verschieben","Nach einer kurzen Nacht den Abend ruhiger gestalten"],"Alles abgehakt. Gute Nacht, und mehr dazu hier:","de"),
+"fr":_mk("cycles-du-sommeil","Les cycles du sommeil : ce qui se passe en une nuit","Une nuit n’est pas un bloc uniforme, mais une suite de phases. Un aperçu tranquille.",
+ [("Léger, profond, rêve","Une nuit se compose de plusieurs passages. Chacun commence par un sommeil léger, passe au sommeil profond et se termine par le sommeil paradoxal. Les transitions sont fluides et varient d’une nuit à l’autre."),
+  ("Environ 90 minutes par tour","En règle générale, un passage dure environ 90 minutes. C’est pourquoi le calculateur travaille avec des multiples. C’est un repère : chez certaines personnes, les cycles sont un peu plus courts ou plus longs."),
+  ("Pourquoi le réveil frappe parfois plus fort","Être réveillé en plein sommeil profond laisse souvent une sensation de brouillard. Se réveiller plus près de la fin d’un passage est souvent vécu plus légèrement. Des horaires fixes et une petite marge pour s’endormir permettent d’en profiter.")],
+ "Votre rythme de sommeil en cinq points",["Fixer l’heure du lever et compter à rebours","Prévoir environ 15 minutes pour s’endormir","Se coucher à des heures similaires","Ne pas repousser le réveil trop souvent","Après une courte nuit, garder une soirée plus calme"],"Tout est coché. Bonne nuit, et pour aller plus loin :","fr"),
+"it":_mk("cicli-del-sonno","I cicli del sonno: cosa succede in una notte","Una notte non è un blocco uniforme, ma una successione di fasi. Una panoramica tranquilla.",
+ [("Leggero, profondo, sogno","Una notte è fatta di più passaggi. Ognuno inizia con sonno leggero, passa al sonno profondo e termina con il sonno REM. Le transizioni sono fluide e cambiano da una notte all’altra."),
+  ("Circa 90 minuti a giro","Di regola un passaggio dura circa 90 minuti. Per questo il calcolatore lavora con i multipli. È un valore indicativo: in alcune persone i cicli sono un po’ più brevi o più lunghi."),
+  ("Perché la sveglia a volte pesa di più","Essere svegliati nel pieno del sonno profondo lascia spesso intontiti. Svegliarsi più vicino alla fine di un passaggio si vive di solito più leggero. Con orari fissi e un piccolo margine per addormentarsi puoi sfruttarlo.")],
+ "Il tuo ritmo del sonno in cinque punti",["Fissare l’ora della sveglia e calcolare a ritroso","Prevedere circa 15 minuti per addormentarsi","Andare a letto a orari simili","Non rimandare troppo spesso la sveglia","Dopo una notte corta, vivere la sera con più calma"],"Tutto spuntato. Buonanotte, e per approfondire:","it")}
+ART4={
+"de":_mk("chronotyp-lerche-eule","Lerche, Taube, Eule: Der eigene Rhythmus","Manche sind morgens hellwach, andere abends. Was der Chronotyp ist und wie du deinen Tag danach ausrichtest.",
+ [("Der innere Takt","Der Chronotyp beschreibt, zu welcher Tageszeit jemand von Natur aus am wachsten ist und wann er müde wird. Er hängt unter anderem vom Alter und von der Veranlagung ab und ist keine Frage von Disziplin."),
+  ("Drei Grundtypen, viele Mischformen","Lerchen sind früh wach und früh müde, Eulen kommen später in Schwung. Die meisten liegen dazwischen, als Tauben. Ein Typ ist keine Schublade, sondern eine Tendenz."),
+  ("Den Tag passend planen","Wichtige Aufgaben lassen sich oft in die wachste Zeit legen. Wer früh raus muss, obwohl er eher spät müde wird, kann es mit Tageslicht am Morgen und ruhigen Abenden versuchen. Kleine Schritte funktionieren besser als große Sprünge.")],
+ "Dein Rhythmus in fünf Punkten",["Notieren, wann du von selbst müde wirst","Wichtiges in die wachste Zeit legen","Morgens früh Tageslicht tanken","Abende mit festem Ablauf gestalten","Den Rhythmus in kleinen Schritten verschieben"],"Alles abgehakt. Gute Nacht, und mehr dazu hier:","de"),
+"fr":_mk("chronotype-alouette-chouette","Alouette, colombe, chouette : votre propre rythme","Certains sont alertes le matin, d’autres le soir. Ce qu’est le chronotype et comment organiser sa journée en conséquence.",
+ [("L’horloge interne","Le chronotype décrit à quel moment de la journée une personne est naturellement la plus alerte et quand elle a sommeil. Il dépend notamment de l’âge et de la prédisposition, et n’est pas une question de discipline."),
+  ("Trois types de base, beaucoup de mélanges","Les alouettes sont tôt réveillées et tôt fatiguées, les chouettes démarrent plus tard. La plupart se situent entre les deux, comme les colombes. Un type n’est pas une case, mais une tendance."),
+  ("Planifier la journée en conséquence","Les tâches importantes peuvent souvent être placées aux heures les plus alertes. Qui doit se lever tôt alors qu’il a sommeil tard peut essayer la lumière du jour le matin et des soirées calmes. De petits pas valent mieux que de grands sauts.")],
+ "Votre rythme en cinq points",["Noter quand vous avez sommeil de vous-même","Placer l’important aux heures les plus alertes","Prendre la lumière du jour tôt le matin","Donner un déroulement fixe à la soirée","Décaler le rythme par petits pas"],"Tout est coché. Bonne nuit, et pour aller plus loin :","fr"),
+"it":_mk("cronotipo-allodola-gufo","Allodola, colomba, gufo: il tuo ritmo","Alcuni sono svegli al mattino, altri la sera. Cos’è il cronotipo e come organizzare la giornata di conseguenza.",
+ [("L’orologio interno","Il cronotipo descrive in quale momento della giornata una persona è per natura più sveglia e quando ha sonno. Dipende tra l’altro dall’età e dalla predisposizione e non è questione di disciplina."),
+  ("Tre tipi di base, molte vie di mezzo","Le allodole si svegliano presto e hanno sonno presto, i gufi partono più tardi. La maggior parte sta nel mezzo, come le colombe. Un tipo non è una casella, ma una tendenza."),
+  ("Pianificare la giornata di conseguenza","I compiti importanti si possono spesso collocare nelle ore più sveglie. Chi deve alzarsi presto pur avendo sonno tardi può provare con la luce del giorno al mattino e sere tranquille. Meglio piccoli passi che grandi salti.")],
+ "Il tuo ritmo in cinque punti",["Annotare quando ti viene sonno da solo","Mettere le cose importanti nelle ore più sveglie","Prendere la luce del giorno presto al mattino","Dare alla sera uno svolgimento fisso","Spostare il ritmo a piccoli passi"],"Tutto spuntato. Buonanotte, e per approfondire:","it")}
 for _l in T:
-    T[_l]["arts"]=[T[_l]["art"],ART2[_l]];T[_l]["br"]=BR[_l]
-AK=["abend","schlafzimmer"]
+    T[_l]["arts"]=[T[_l]["art"],ART2[_l],ART3[_l],ART4[_l]];T[_l]["br"]=BR[_l]
+AK=["abend","schlafzimmer","zyklen","chronotyp"]
 def img(n): return os.path.exists(f"assets/img/{n}.jpg")
 def bg(n): return f' style="background-image:linear-gradient(180deg,rgba(7,10,26,.55),rgba(7,10,26,.9)),url(/assets/img/{n}.jpg);background-size:cover;background-position:center"' if img(n) else ""
 
@@ -157,7 +192,7 @@ def home(l):
     o+=f'<section class="pano"{bg("pano")}><p>{t["pano"]}</p>{L(l,"pano",GO[l])}</section>'
     qs="".join(f'<div class="cq"{"" if i==0 else " hidden"}><small>{k["of"]} {i+1} / 3</small><b>{q}</b><div class="co">'+"".join(f'<button type="button" data-v="{v}">{x}</button>' for v,x in enumerate(os_))+'</div></div>' for i,(q,os_) in enumerate(k["q"]))
     res="".join(f'<div class="cr" data-k="{kk}" hidden><span class="eyebrow">{k["k"]}</span><h3>{ti}</h3><p>{d}</p></div>' for kk,(ti,d) in k["r"].items())
-    aurl=f'/{l}/{a["slug"]}/'
+    a=t["arts"][3];aurl=f'/{l}/{a["slug"]}/'
     o+=f'<section id="check" class="ck"><div class="wrap"><span class="eyebrow">{k["k"]}</span><h2>{k["h"]}</h2><p class="sub">{k["p"]}</p><div class="card ckb rv"><div class="cdots"><i></i><i></i><i></i></div>{qs}{res}<div class="cf2" hidden><span class="cs">{k["art"]}</span><a class="cl" href="{aurl}">{a["title"]}</a>{L(l,"check",GO[l],"cta2")}<button type="button" class="cagain">{k["again"]}</button></div></div></div></section>'
     tiles="".join(f'<button type="button" class="tile" aria-pressed="false">{x}</button>' for x in r["i"])
     o+=f'<section id="abend" class="rt"><div class="wrap"><span class="eyebrow">{r["k"]}</span><h2>{r["h"]}</h2><p class="sub">{r["p"]}</p><div class="grid"><div class="moon rv"><i class="sh"></i></div><div class="rv"><div class="tiles">{tiles}</div><p class="rmsg" data-m="{"|".join(r["m"])}">{r["m"][0]}</p><span class="rcount" data-u="{r["u"]}">0 / {len(r["i"])} {r["u"]}</span> {L(l,"ritual")}</div></div></div></section>'
@@ -166,7 +201,7 @@ def home(l):
     b=t["br"]
     o+=f'<section id="atem" class="br"><div class="wrap"><span class="eyebrow">{b["k"]}</span><h2>{b["h"]}</h2><p class="sub">{b["p"]}</p><div class="brw rv" data-i="{b["i"]}" data-o="{b["o"]}" data-go="{b["go"]}" data-st="{b["st"]}" data-u="{b["u"]}"><div class="brc"><span>{b["rd"]}</span></div><div class="brs">0 {b["u"]}</div><button type="button" class="btn g brb">{b["go"]}</button></div></div></section>'
     fq="".join(f'<details class="rv"><summary>{q}</summary><p>{x}</p></details>' for q,x in f["c"])
-    o+=f'<section id="faq"><div class="wrap two"><div><span class="eyebrow">{t["tz"]["k"]}</span>{"".join(f'<a class="art rv" href="/{l}/{x["slug"]}/" style="margin-top:14px"><div class="moon cr"></div><h3>{x["title"]}</h3><p>{x["lede"]}</p><span class="go">{t["tz"]["go"]}</span></a>' for x in t["arts"])}</div><div><span class="eyebrow">{f["k"]}</span><h2>{f["h"]}</h2>{fq}<p class="mlink">{L(l,"faq")}</p></div></div></section>'
+    o+=f'<section id="artikel"><div class="wrap"><span class="eyebrow">{t["tz"]["k"]}</span><div class="arts">{"".join(f'<a class="art rv" href="/{l}/{x["slug"]}/" style="margin-top:14px"><div class="moon cr"></div><h3>{x["title"]}</h3><p>{x["lede"]}</p><span class="go">{t["tz"]["go"]}</span></a>' for x in t["arts"])}</div></div></section><section id="faq"><div class="wrap" style="max-width:780px"><span class="eyebrow">{f["k"]}</span><h2>{f["h"]}</h2>{fq}<p class="mlink">{L(l,"faq")}</p></div></section>'
     return o+footer(l)
 
 def article(l,i0=0):
@@ -178,7 +213,7 @@ def article(l,i0=0):
         if i==0: o+=f'<div class="cb"><p>{MORE[l]}:</p>{L(l,"art-mid",GO[l])}</div>'
         if i<2: o+='<div class="sep">· · ·</div>'
     o+=f'<h2>{a["ch"]}</h2><div class="chk">'+"".join(f'<label><input type="checkbox"><span>{x}</span></label>' for x in a["ci"])+f'</div><p class="done" hidden>{a["done"]} {L(l,"art-end",GO[l])}</p>'
-    o+=f'<p class="fine">{a["fine"]}</p><div class="rel"><span class="eyebrow">{a["rel"]}</span><p><a class="xl" href="/{l}/#check">{t["ck"]["k"]} →</a> &nbsp; <a class="xl" href="/{l}/#rechner">{t["calc"]["k"]} →</a> &nbsp; <a class="xl" href="/{l}/{oth["slug"]}/">{oth["title"]} →</a></p></div></article>'
+    o+=f'<p class="fine">{a["fine"]}</p><div class="rel"><span class="eyebrow">{a["rel"]}</span><p><a class="xl" href="/{l}/#check">{t["ck"]["k"]} →</a> &nbsp; <a class="xl" href="/{l}/#rechner">{t["calc"]["k"]} →</a> {"".join(f' &nbsp; <a class="xl" href="/{l}/{x["slug"]}/">{x["title"]} →</a>' for x in t["arts"] if x is not a)}</p></div></article>'
     return o+footer(l)
 
 for l in LANGS:
