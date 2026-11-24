@@ -99,6 +99,36 @@ T={
   ch="La tua sera in cinque punti",ci=["Mettere via gli schermi un po’ prima di dormire","Oscurare la stanza e tenerla piuttosto fresca","Ogni sera una sequenza simile","Ultimo pasto non troppo tardi né troppo pesante","Prendere la luce del giorno al mattino"],
   done="Tutto spuntato. Buonanotte, e per approfondire:",rel="Da leggere anche",fine="Nota: questo testo offre informazioni generali e non sostituisce un parere medico. Se i disturbi del sonno durano a lungo, parlane con un medico.")),
 }
+
+ART2={
+"de":dict(slug="schlafzimmer-ruhe",title="Das Schlafzimmer: Ein Ort nur für die Nacht",lede="Dunkelheit, frische Luft, Ruhe: Wie das Zimmer den Schlaf unterstützen kann, ohne teure Anschaffungen.",
+ s=[("Dunkelheit zuerst","Schon wenig Licht kann stören: Straßenlaternen, Standby-Lämpchen, ein Handy-Display. Vorhänge oder eine Schlafmaske sind einfache Lösungen. Wer nachts aufsteht, nutzt am besten ein schwaches, warmes Licht."),
+    ("Frische Luft, angenehme Kühle","Viele schlafen in einem eher kühlen, gut gelüfteten Zimmer besser. Kurz vor dem Schlafengehen zu lüften ist ein einfacher Anfang. Was angenehm ist, bleibt persönlich."),
+    ("Ruhe und ein klarer Zweck","Geräusche lassen sich oft dämpfen, etwa durch geschlossene Türen oder Ohrstöpsel. Hilfreich ist auch, das Bett vor allem zum Schlafen zu nutzen: So verbindet der Kopf das Zimmer mit Ruhe.")],
+ ch="Dein Schlafzimmer in fünf Punkten",ci=["Vorhänge oder Maske gegen fremdes Licht","Standby-Lämpchen und Displays abdecken","Vor dem Schlafen kurz lüften","Den Raum eher kühl halten","Das Bett vor allem zum Schlafen nutzen"],
+ done="Alles abgehakt. Schlaf gut, und mehr dazu hier:",rel="Weiterlesen",fine="Hinweis: Dieser Text gibt allgemeine Informationen und ersetzt keine ärztliche Beratung. Wenn Schlafprobleme länger anhalten, sprich mit einer Ärztin oder einem Arzt."),
+"fr":dict(slug="chambre-sommeil",title="La chambre : un lieu réservé à la nuit",lede="Obscurité, air frais, calme : comment la pièce peut soutenir le sommeil, sans achats coûteux.",
+ s=[("L’obscurité d’abord","Même peu de lumière peut gêner : lampadaires, veilles, écran de téléphone. Des rideaux ou un masque sont des solutions simples. Si vous vous levez la nuit, une lumière faible et chaude est préférable."),
+    ("Air frais, fraîcheur agréable","Beaucoup dorment mieux dans une pièce plutôt fraîche et bien aérée. Aérer juste avant de se coucher est un bon début. Ce qui est agréable reste personnel."),
+    ("Calme et usage clair","Les bruits peuvent souvent être atténués, par exemple avec des portes fermées ou des bouchons d’oreilles. Il aide aussi d’utiliser le lit surtout pour dormir : l’esprit associe alors la pièce au repos.")],
+ ch="Votre chambre en cinq points",ci=["Rideaux ou masque contre la lumière extérieure","Couvrir les veilles et les écrans","Aérer brièvement avant de dormir","Garder la pièce plutôt fraîche","Utiliser le lit surtout pour dormir"],
+ done="Tout est coché. Bonne nuit, et pour aller plus loin :",rel="À lire aussi",fine="Remarque : ce texte donne des informations générales et ne remplace pas un avis médical. Si des troubles du sommeil durent, parlez-en à un médecin."),
+"it":dict(slug="camera-da-letto-sonno",title="La camera da letto: un luogo solo per la notte",lede="Buio, aria fresca, calma: come la stanza può sostenere il sonno, senza acquisti costosi.",
+ s=[("Prima di tutto il buio","Anche poca luce può disturbare: lampioni, spie in standby, lo schermo del telefono. Tende o una mascherina sono soluzioni semplici. Se ti alzi di notte, meglio una luce debole e calda."),
+    ("Aria fresca, frescura piacevole","Molti dormono meglio in una stanza piuttosto fresca e ben aerata. Arieggiare poco prima di coricarsi è un buon inizio. Ciò che è piacevole resta personale."),
+    ("Calma e uno scopo chiaro","I rumori si possono spesso attutire, ad esempio con le porte chiuse o i tappi per le orecchie. Aiuta anche usare il letto soprattutto per dormire: la mente associa così la stanza al riposo.")],
+ ch="La tua camera in cinque punti",ci=["Tende o mascherina contro la luce esterna","Coprire le spie in standby e gli schermi","Arieggiare brevemente prima di dormire","Tenere la stanza piuttosto fresca","Usare il letto soprattutto per dormire"],
+ done="Tutto spuntato. Buonanotte, e per approfondire:",rel="Da leggere anche",fine="Nota: questo testo offre informazioni generali e non sostituisce un parere medico. Se i disturbi del sonno durano a lungo, parlane con un medico.")}
+BR={
+"de":dict(k="Atemübung",h="Vier ein, <em>sechs aus</em>",p="Folge dem Kreis: Er wächst beim Einatmen und schrumpft beim Ausatmen. Eine ruhige Übung für zwischendurch, kein Heilmittel.",go="Starten",st="Stoppen",i="Einatmen",o="Ausatmen",rd="Bereit",u="Runden",nav="Atmen"),
+"fr":dict(k="Exercice de respiration",h="Quatre pour inspirer, <em>six pour expirer</em>",p="Suivez le cercle : il grandit à l’inspiration et rétrécit à l’expiration. Un exercice calme, pour une pause, pas un remède.",go="Démarrer",st="Arrêter",i="Inspirez",o="Expirez",rd="Prêt",u="tours",nav="Respirer"),
+"it":dict(k="Esercizio di respirazione",h="Quattro per inspirare, <em>sei per espirare</em>",p="Segui il cerchio: cresce quando inspiri e si restringe quando espiri. Un esercizio calmo per una pausa, non un rimedio.",go="Avvia",st="Ferma",i="Inspira",o="Espira",rd="Pronto",u="giri",nav="Respiro")}
+for _l in T:
+    T[_l]["arts"]=[T[_l]["art"],ART2[_l]];T[_l]["br"]=BR[_l]
+AK=["abend","schlafzimmer"]
+def img(n): return os.path.exists(f"assets/img/{n}.jpg")
+def bg(n): return f' style="background-image:linear-gradient(180deg,rgba(7,10,26,.55),rgba(7,10,26,.9)),url(/assets/img/{n}.jpg);background-size:cover;background-position:center"' if img(n) else ""
+
 def url(l,sub=""): return f"/{l}/{sub}"
 def head(l,title,desc,path_by_lang,self_path):
     alts="".join(f'<link rel="alternate" hreflang="{x}" href="{B}{p}">' for x,p in path_by_lang.items())+f'<link rel="alternate" hreflang="x-default" href="{B}{path_by_lang["de"]}">'
@@ -106,7 +136,7 @@ def head(l,title,desc,path_by_lang,self_path):
 def header(l,paths,home=True):
     t=T[l]
     if home:
-        links="".join(f'<a href="#{a}">{n}</a>' for a,n in zip(["rechner","check","abend","mythen"],t["nav"]))+L(l,"nav","Molita ↗")
+        links="".join(f'<a href="#{a}">{n}</a>' for a,n in zip(["rechner","check","abend","atem","mythen"],t["nav"][:3]+[t["br"]["nav"],t["nav"][3]]))+L(l,"nav","Molita ↗")
         nvl=f'<nav class="nvl">{links}</nav>'
     else:
         nvl=f'<nav class="nvl"><a href="/{l}/">← {t["home"]}</a>{L(l,"nav","Molita ↗")}</nav>'
@@ -114,16 +144,16 @@ def header(l,paths,home=True):
     return f'<header class="nv"><div class="nvi"><a class="logo" href="/{l}/"><i></i>Vesper</a>{nvl}<div class="lg">{lg}</div></div></header>'
 def footer(l):
     t=T[l];a=t["art"]
-    return f'<footer><div class="wrap fi"><div>{t["foot"]}</div><div><a href="/{l}/">{t["home"]}</a><a href="/{l}/{a["slug"]}/">{a["title"].split(":")[0]}</a>{L(l,"footer")}</div><div class="dis">{t["dis"]}</div></div></footer><script src="/assets/app.js" defer></script></body></html>'
+    return f'<footer><div class="wrap fi"><div>{t["foot"]}</div><div><a href="/{l}/">{t["home"]}</a>{"".join(f'<a href="/{l}/{x["slug"]}/">{x["title"].split(":")[0]}</a>' for x in t["arts"])}{L(l,"footer")}</div><div class="dis">{t["dis"]}</div></div></footer><script src="/assets/app.js" defer></script></body></html>'
 def paths_home(): return {x:f"/{x}/" for x in LANGS}
-def paths_art(): return {x:f'/{x}/{T[x]["art"]["slug"]}/' for x in LANGS}
+def paths_art(i=0): return {x:f'/{x}/{T[x]["arts"][i]["slug"]}/' for x in LANGS}
 
 def home(l):
     t=T[l];c=t["calc"];k=t["ck"];r=t["rt"];m=t["my"];f=t["fq"];a=t["art"]
     o=head(l,t["title"],t["desc"],paths_home(),f"/{l}/")+header(l,paths_home())
     o+=f'<section class="hero"><canvas id="stars"></canvas><div class="hm"><div class="moon cr"></div></div><div class="wrap"><span class="eyebrow">{t["eb"]}</span><h1>{t["h"]}</h1><p>{t["p"]}</p><div class="btns"><a class="btn g" href="#rechner">{t["b1"]}</a>{L(l,"hero",GO[l],"btn o")}</div></div></section>'
     o+=f'<section id="rechner" class="calc"><div class="wrap"><span class="eyebrow">{c["k"]}</span><h2>{c["h"]}</h2><p class="sub">{c["p"]}</p><div class="card rv" id="calc" data-l1="{c["r"][0]}" data-l2="{c["r"][1]}" data-cyc="{c["cyc"]}" data-hr="{c["hr"]}"><div class="tabs" role="tablist"><button role="tab" aria-selected="true">{c["t"][0]}</button><button role="tab" aria-selected="false">{c["t"][1]}</button></div><label class="tin"><input type="time" value="07:00" aria-label="{c["t"][0]}"></label><div class="cres"></div><p class="note">{c["note"]} {L(l,"rechner")}</p></div></div></section>'
-    o+=f'<section class="pano"><p>{t["pano"]}</p>{L(l,"pano",GO[l])}</section>'
+    o+=f'<section class="pano"{bg("pano")}><p>{t["pano"]}</p>{L(l,"pano",GO[l])}</section>'
     qs="".join(f'<div class="cq"{"" if i==0 else " hidden"}><small>{k["of"]} {i+1} / 3</small><b>{q}</b><div class="co">'+"".join(f'<button type="button" data-v="{v}">{x}</button>' for v,x in enumerate(os_))+'</div></div>' for i,(q,os_) in enumerate(k["q"]))
     res="".join(f'<div class="cr" data-k="{kk}" hidden><span class="eyebrow">{k["k"]}</span><h3>{ti}</h3><p>{d}</p></div>' for kk,(ti,d) in k["r"].items())
     aurl=f'/{l}/{a["slug"]}/'
@@ -132,29 +162,32 @@ def home(l):
     o+=f'<section id="abend" class="rt"><div class="wrap"><span class="eyebrow">{r["k"]}</span><h2>{r["h"]}</h2><p class="sub">{r["p"]}</p><div class="grid"><div class="moon rv"><i class="sh"></i></div><div class="rv"><div class="tiles">{tiles}</div><p class="rmsg" data-m="{"|".join(r["m"])}">{r["m"][0]}</p><span class="rcount" data-u="{r["u"]}">0 / {len(r["i"])} {r["u"]}</span> {L(l,"ritual")}</div></div></div></section>'
     cards="".join(f'<button class="mc rv" aria-pressed="false"><span class="mi"><span class="mf"><small>{i+1} / {len(m["c"])}</small><b>{q}</b><em>{m["tap"]} ↻</em></span><span class="mb"><small class="v{v}">{m["v"][v]}</small><p>{e}</p></span></span></button>' for i,(q,v,e) in enumerate(m["c"]))
     o+=f'<section id="mythen" class="my"><div class="wrap"><span class="eyebrow">{m["k"]}</span><h2>{m["h"]}</h2><p class="sub">{m["p"]}</p><div class="myths">{cards}</div><p class="mlink">{L(l,"myth")}</p></div></section>'
+    b=t["br"]
+    o+=f'<section id="atem" class="br"><div class="wrap"><span class="eyebrow">{b["k"]}</span><h2>{b["h"]}</h2><p class="sub">{b["p"]}</p><div class="brw rv" data-i="{b["i"]}" data-o="{b["o"]}" data-go="{b["go"]}" data-st="{b["st"]}" data-u="{b["u"]}"><div class="brc"><span>{b["rd"]}</span></div><div class="brs">0 {b["u"]}</div><button type="button" class="btn g brb">{b["go"]}</button></div></div></section>'
     fq="".join(f'<details class="rv"><summary>{q}</summary><p>{x}</p></details>' for q,x in f["c"])
-    o+=f'<section id="faq"><div class="wrap two"><div><span class="eyebrow">{t["tz"]["k"]}</span><a class="art rv" href="{aurl}" style="margin-top:14px"><div class="moon cr"></div><h3>{a["title"]}</h3><p>{a["lede"]}</p><span class="go">{t["tz"]["go"]}</span></a></div><div><span class="eyebrow">{f["k"]}</span><h2>{f["h"]}</h2>{fq}<p class="mlink">{L(l,"faq")}</p></div></div></section>'
+    o+=f'<section id="faq"><div class="wrap two"><div><span class="eyebrow">{t["tz"]["k"]}</span>{"".join(f'<a class="art rv" href="/{l}/{x["slug"]}/" style="margin-top:14px"><div class="moon cr"></div><h3>{x["title"]}</h3><p>{x["lede"]}</p><span class="go">{t["tz"]["go"]}</span></a>' for x in t["arts"])}</div><div><span class="eyebrow">{f["k"]}</span><h2>{f["h"]}</h2>{fq}<p class="mlink">{L(l,"faq")}</p></div></div></section>'
     return o+footer(l)
 
-def article(l):
-    t=T[l];a=t["art"];ps=paths_art()
+def article(l,i0=0):
+    t=T[l];a=t["arts"][i0];ps=paths_art(i0);oth=t["arts"][1-i0]
     o=head(l,a["title"]+" – Vesper",a["lede"],ps,ps[l])+header(l,ps,False)
-    o+=f'<div class="ah"><div class="moon cr"></div><div class="wrap"><span class="eyebrow">Vesper</span><h1>{a["title"]}</h1><p>{a["lede"]}</p></div></div><article class="body">'
+    o+=f'<div class="ah"{bg(AK[i0])}><div class="moon cr"></div><div class="wrap"><span class="eyebrow">Vesper</span><h1>{a["title"]}</h1><p>{a["lede"]}</p></div></div><article class="body">'
     for i,(h,p) in enumerate(a["s"]):
         o+=f'<h2>{h}</h2><p>{p}</p>'
         if i==0: o+=f'<div class="cb"><p>{MORE[l]}:</p>{L(l,"art-mid",GO[l])}</div>'
         if i<2: o+='<div class="sep">· · ·</div>'
     o+=f'<h2>{a["ch"]}</h2><div class="chk">'+"".join(f'<label><input type="checkbox"><span>{x}</span></label>' for x in a["ci"])+f'</div><p class="done" hidden>{a["done"]} {L(l,"art-end",GO[l])}</p>'
-    o+=f'<p class="fine">{a["fine"]}</p><div class="rel"><span class="eyebrow">{a["rel"]}</span><p><a class="xl" href="/{l}/#check">{t["ck"]["k"]} →</a> &nbsp; <a class="xl" href="/{l}/#rechner">{t["calc"]["k"]} →</a></p></div></article>'
+    o+=f'<p class="fine">{a["fine"]}</p><div class="rel"><span class="eyebrow">{a["rel"]}</span><p><a class="xl" href="/{l}/#check">{t["ck"]["k"]} →</a> &nbsp; <a class="xl" href="/{l}/#rechner">{t["calc"]["k"]} →</a> &nbsp; <a class="xl" href="/{l}/{oth["slug"]}/">{oth["title"]} →</a></p></div></article>'
     return o+footer(l)
 
 for l in LANGS:
-    os.makedirs(f"{l}/{T[l]['art']['slug']}",exist_ok=True)
-    open(f"{l}/index.html","w",encoding="utf-8").write(home(l))
-    open(f"{l}/{T[l]['art']['slug']}/index.html","w",encoding="utf-8").write(article(l))
+    open(f"{l}/index.html","w",encoding="utf-8").write(home(l)) if os.path.isdir(l) else (os.makedirs(l),open(f"{l}/index.html","w",encoding="utf-8").write(home(l)))
+    for i0,ar in enumerate(T[l]["arts"]):
+        os.makedirs(f"{l}/{ar['slug']}",exist_ok=True)
+        open(f"{l}/{ar['slug']}/index.html","w",encoding="utf-8").write(article(l,i0))
 open("index.html","w").write('<!doctype html><meta charset="utf-8"><title>Vesper</title><meta name="viewport" content="width=device-width,initial-scale=1"><script>var n=(navigator.language||"de").slice(0,2);location.replace("/"+(n=="fr"||n=="it"?n:"de")+"/")</script><noscript><a href="/de/">Vesper</a></noscript>')
 open("robots.txt","w").write(f"User-agent: *\nAllow: /\nSitemap: {B}/sitemap.xml\n")
-u=[f"/{l}/" for l in LANGS]+[f'/{l}/{T[l]["art"]["slug"]}/' for l in LANGS]
+u=[f"/{l}/" for l in LANGS]+[f'/{l}/{ar["slug"]}/' for l in LANGS for ar in T[l]["arts"]]
 open("sitemap.xml","w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+"".join(f"<url><loc>{B}{x}</loc></url>\n" for x in u)+"</urlset>\n")
 open("assets/vesper.svg","w").write('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#070a1a"/><circle cx="32" cy="32" r="16" fill="#f3ead7"/><circle cx="40" cy="27" r="14" fill="#070a1a"/></svg>')
 print("built",len(u),"pages")

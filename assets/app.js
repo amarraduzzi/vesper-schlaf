@@ -33,6 +33,11 @@ const rt=$('#abend');
 if(rt){const t=$$('.tile',rt),m=$('.moon',rt),msg=$('.rmsg',rt),cnt=$('.rcount',rt),ms=msg.dataset.m.split('|');
  t.forEach(b=>b.onclick=()=>{b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!='true');const n=t.filter(x=>x.getAttribute('aria-pressed')=='true').length;
   m.style.setProperty('--p',Math.max(.04,n/t.length));msg.textContent=ms[n==0?0:n<=2?1:n<=4?2:n<8?3:4];cnt.textContent=n+' / '+t.length+' '+cnt.dataset.u})}
+/* breath */
+const bw=$('.brw');
+if(bw){const c=$('.brc',bw),sp=$('span',c),bt=$('.brb',bw),rs=$('.brs',bw);let on=false,n=0,t1,t2;
+ const cyc=()=>{sp.textContent=bw.dataset.i;c.classList.add('in');t1=setTimeout(()=>{sp.textContent=bw.dataset.o;c.classList.remove('in');t2=setTimeout(()=>{n++;rs.textContent=n+' '+bw.dataset.u;cyc()},6000)},4000)};
+ bt.onclick=()=>{on=!on;if(on){n=0;rs.textContent='0 '+bw.dataset.u;bt.textContent=bw.dataset.st;cyc()}else{clearTimeout(t1);clearTimeout(t2);c.classList.remove('in');bt.textContent=bw.dataset.go;sp.textContent='…'}}}
 /* myth */
 $$('.mc').forEach(b=>b.onclick=()=>b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!='true'));
 /* article checklist */
