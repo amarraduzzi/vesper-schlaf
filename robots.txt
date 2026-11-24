@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vesper-schlaf.ch/sitemap.xml
