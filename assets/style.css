@@ -135,3 +135,12 @@ footer{padding:50px 0 60px;border-top:1px solid var(--line);color:var(--mu);font
 .pic{margin:34px -22px;padding:0}
 .pic img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:14px}
 @media(min-width:760px){.pic{margin:38px -60px}}
+
+/* hero photo */
+.hp{position:absolute;inset:0;background:url(/assets/img/hero.jpg) 62% center/cover no-repeat;animation:hpz 28s ease-in-out infinite alternate;transform-origin:70% 55%;z-index:0}
+.hp::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,10,26,.82) 0,rgba(7,10,26,.5) 38%,rgba(7,10,26,0) 70%),linear-gradient(180deg,rgba(7,10,26,.35) 0,rgba(7,10,26,0) 22%,rgba(7,10,26,0) 78%,var(--bg) 100%)}
+.hero #stars,.hero .hm{display:none}
+@keyframes hpz{from{transform:scale(1)}to{transform:scale(1.08)}}
+@media(max-width:860px){.hp{background-position:68% center}.hp::after{background:linear-gradient(180deg,rgba(7,10,26,.7) 0,rgba(7,10,26,.62) 60%,var(--bg) 100%)}}
+@media(prefers-reduced-motion:reduce){.hp{animation:none!important}}
+.hero .aur,.hero .mt{display:none!important}
