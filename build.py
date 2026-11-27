@@ -1,5 +1,5 @@
 import os
-MAIN="https://molitademo1.pages.dev"
+MAIN="https://molitademo2.pages.dev"
 B="https://vesper-schlaf.ch"
 LANGS=["de","fr","it"]
 NV={"de":"Mehr ↗","fr":"Plus ↗","it":"Altro ↗"}
